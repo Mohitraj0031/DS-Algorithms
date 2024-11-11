@@ -1,25 +1,41 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-void GCD(int a , int b){
-        for(int i = 1; i<=a; i++) {
-            int first = 0;
-            first  = i;
-            cout<<endl;
-        }
-        for(int j = 1; j<=b; j++){
-            int second = 0 ;
-            second = j;
-            cout<<endl;
-        }
-
+void GCD(int n1, int n2)
+{
+    int qcd = 0;
+    for (int i = 1; i <= min(n1, n2); i++)
+    {
+        if(n1 % i == 0  && n2 % i == 0 )   qcd = i;
+    }
+    cout<<qcd;
 }
 
-int main(){
-    int a , b;
-    cout<<"Enter Two numbers";
-    cin>>a;
-    cin>>b;
-    GCD(a,b);
-    return 0 ;
+int gcd(int a , int b){
+    while(a > 0 && b > 0) {
+        if(a>b) a = a % b ;
+        else b = b % a;
+    }
+    if(a == 0 ) return b;
+    else return a;
 }
+
+
+int main()
+{
+    int a, b;
+    cout << "Enter Two numbers"<<endl;
+    cin >>a;
+    cin >>b;
+    cout<<gcd(a, b);
+    return 0;
+}
+// int main()
+// {
+//     int n1, n2;
+//     cout << "Enter Two numbers"<<endl;
+//     cin >>n1;
+//     cin >>n2;
+//     GCD(n1, n2);
+//     return 0;
+// }
