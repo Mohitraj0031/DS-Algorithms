@@ -23,4 +23,6 @@ int main(){
         //fetching
         cout << mpp[number] << endl;
     }
+
+    return 0 ;
 }
