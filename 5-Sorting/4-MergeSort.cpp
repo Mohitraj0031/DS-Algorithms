@@ -53,3 +53,8 @@ int main() {
 
     return 0;
 }
+
+
+// Merge sort's worst and average case of time complexity is O(N)
+// And Best case time complexity is O(N * log2^n)
+// Space complexity is O(N)
