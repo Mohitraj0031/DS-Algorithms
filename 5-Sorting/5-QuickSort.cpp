@@ -62,3 +62,7 @@ int main() {
     cout << endl;
     return 0;
 }
+
+// Its worst Time Complexity = O(N^2)
+// Time Complexity for the best and average case: O(N*logN)
+// Space Complexity: O(1) + O(N) auxiliary stack space.
